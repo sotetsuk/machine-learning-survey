@@ -1,2 +1,2 @@
-# machine-learning-survey
-Machine learning surrvey in Japanese
+# Machine Learning Survey
+Personal machine learning surrvey in Japanese

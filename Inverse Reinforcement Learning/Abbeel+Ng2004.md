@@ -1,5 +1,5 @@
 # Apprenticeship learning via inverse reinforcement learning
-- author:
+- author: Abbeel, Pieter and Ng, Andrew Y
 - year: 2004
 - citation: 801 (2016年5月23日 時点)
 - [pdf](http://machinelearning.wustl.edu/mlpapers/paper_files/icml2004_PieterN04.pdf)

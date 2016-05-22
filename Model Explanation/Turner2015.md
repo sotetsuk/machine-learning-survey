@@ -29,7 +29,6 @@
 
 ## 5. 議論はある？
 - input distributionを別で学習する必要がある
-- 
 
 ## 6. 次に読むべき論文は？
 > The downside of the interpretable approach is seen in machine learning competitions, where the winning methods are typically nonparametric, or have a very large number of parameters (e.g., deep learning) [4].

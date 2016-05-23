@@ -4,6 +4,7 @@ URL=`echo $a | jq -r .[0].title.url`
 YEAR=`echo $a | jq -r .[0].year`
 NUM_CITE=`echo $a | jq -r .[0].num_cite`
 LINK_FORMAT=`echo $a | jq -r .[0].link.format | tr "[:upper:]" "[:lower:]"`
+echo $LINK_FORMAT
 LINK_URL=`echo $a | jq -r .[0].link.url`
 
 echo "# $TITLE"
@@ -14,7 +15,7 @@ if [ ! $LINK_FORMAT = "" ]; then
   echo "- [${LINK_FORMAT}]($LINK_URL)" 
 fi
 
-if [ $LINK_FORMAT = "pdf" ]; then
+if [ "$LINK_FORMAT" = "pdf" ]; then
   curl -s $LINK_URL > tmp.pdf
   paper2tmb stack tmp.pdf "tmb/$TITLE.png" 8 1
   rm tmp.pdf

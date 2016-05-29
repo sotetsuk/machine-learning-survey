@@ -29,6 +29,7 @@
 
 
 ### 文献
+- Dayan and Abbott, 2001, [Theoretical Neuroscience](http://cns-classes.bu.edu/cn510/Papers/Theoretical%20Neuroscience%20Computational%20and%20Mathematical%20Modeling%20of%20Neural%20Systems%20-%20%20Peter%20Dayan,%20L.%20F.%20Abbott.pdf)
 - Samejima and Doya 2001, [強化学習と大脳基底核(pdf)](http://ci.nii.ac.jp/els/110001096714.pdf?id=ART0001257939&type=pdf&lang=jp&host=cinii&order_no=&ppv_type=0&lang_sw=&no=1464335228&cp=)
 - Schultz et al., 1997, [A neural substrate of prediction and reward](Schultz+1997.md)
   - 有名なscienceの論文

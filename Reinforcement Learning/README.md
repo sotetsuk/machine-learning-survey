@@ -1,32 +1,25 @@
 # Reinforcement Learning
 
-## 脳報酬系のモデリング
+## Classical (Pavlovian) Conditioning
+いわゆる「パブロフの犬」
 
-### 脳部位
+### 関連する脳部位
 
-- 大脳基底核
-  - 線条体
-- 中脳
-  - ventral tegmental area （VTA ）
-  - 黒質網様部（SNc ）
+- Midbrain (中脳)
+  - VTA (ventral tegmental area; 腹側被蓋野)
+  - SN (substantia nigra; 黒質)
 
-#### 大脳基底核
-> 大脳基底核は，その病変や破壊により随意運動の開始や制御に障害が出ることなどから，その運動における役割が調べられてきた ．（Samejima and Doya 2001)
+> Dopamine neurons of the ventral tegmental area (VTA) and substantia nigra have long been identified with the processing of rewarding stimuli. [cited from Schultz et al., 1997]
 
 #### Midbrain dopamine (DA) cell
 
-##### Schultz, 1998
+DA cellの活動はclassical learningをみせる
+
 > Midbrain dopamine (DA) cells play a central role in rewardmediated learning in animals, and their activity follows classical learning rules (Schultz, 1998, 2002; Waelti et al., 2001) [cited from Pan et al., 2005]
 
-##### Schultz et al., 1997
+TD学習が行われているのではないかという説がSchultz et al., 1997などで主張されている
+
 > Furthermore, several features of DA cell activity match properties of the prediction error signal of the temporal difference (TD) algorithm for machine learning, leading to the hypothesis that DA cell activity may be providing a teaching signal within a neural analog of a TD learning system in the brain (Houk et al., 1995; Montague et al., 1996; Schultz et al., 1997; Daw et al., 2003; Nakahara et al., 2004). [cited from Pan et al., 2005]
-
-
-> DA cells show responses to unexpected rewards, but after training with cue–reward pairings, they respond to the cue more than to the predicted reward (Ljungberg et al., 1992). [cited from Pan et al., 2006]
-
-
-- Pan et al., 2005
-
 
 ### 文献
 - Dayan and Abbott, 2001, [Theoretical Neuroscience](http://cns-classes.bu.edu/cn510/Papers/Theoretical%20Neuroscience%20Computational%20and%20Mathematical%20Modeling%20of%20Neural%20Systems%20-%20%20Peter%20Dayan,%20L.%20F.%20Abbott.pdf)

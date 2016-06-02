@@ -1,7 +1,7 @@
 # Reinforcement Learning
 
 ## Classical (Pavlovian) Conditioning
-いわゆる「パブロフの犬」
+Schultz et al., 1997とPan et al., 2005についてスライドにまとめた: [強化学習勉強会・論文紹介](http://www.slideshare.net/sotetsukoyamada/22-62639753)
 
 ### 関連する脳部位
 

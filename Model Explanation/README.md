@@ -2,7 +2,7 @@
 
 - Ribeiro et al., 2016 [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](Ribeiro+2016.md)
 - Turner, 2015, [A Model Explanation System](Turner2015.md)
-- Baehrens et al., 2010, How to explain individual classification decisions
+- Baehrens et al., 2010, [How to explain individual classification decisions](Baehrens+2010.md)
 
 ## 考えられる応用先
 - ゲームAI（AlphaGoは人間を超える性能を示したが、その一手を何故打ったのかは分からない）
@@ -10,4 +10,4 @@
 - 文章校閲（学習によって自動校閲ができたとして、例えばなぜそのPassiveは是なのか（否なのか？））
 - 異常検知（なぜ異常だと判断したのか）
 - Turner 2015: クレカの不正利用検知（なぜ不正利用だと感じたのか）
-- Ribeiro et al., 2016:  
+- Ribeiro et al., 2016: 

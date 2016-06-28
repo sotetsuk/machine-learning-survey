@@ -32,7 +32,7 @@
 - Handler et al., 2016, Visualizing Textual Models with In-Text and Word-as-Pixel Highlighting ![@WHI2016](https://img.shields.io/badge/%40-WHI2016-orange.svg)
 
 ## 会議・ワークショップ
-- [WHI 2016 @ ICML](https://sites.google.com/site/2016whi/) ![@WHI2016](https://img.shields.io/badge/%40-WHI2016-orange.svg)
+- [pdf](https://drive.google.com/file/d/0B9mGJ4F63iKGZWk0cXZraTNjRVU/view) [WHI 2016 @ ICML](https://sites.google.com/site/2016whi/) ![@WHI2016](https://img.shields.io/badge/%40-WHI2016-orange.svg)
 
 ## 関連研究者
 - Turner

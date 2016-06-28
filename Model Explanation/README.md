@@ -5,7 +5,7 @@
 - Ribeiro et al., 2016 [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](Ribeiro+2016.md) ![model:any](https://img.shields.io/badge/model-any-blue.svg) ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
 - Turner, 2015, [A Model Explanation System](Turner2015.md) ![model:any](https://img.shields.io/badge/model-any-blue.svg) ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
 - Baehrens et al., 2010, How to explain individual classification decisions ![model:any](https://img.shields.io/badge/model-any-blue.svg) ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
-- Koyamada et al., 2015, Principal Sensitivity Analysis ![model:any](https://img.shields.io/badge/model-any-blue.svg) ![in:local](https://img.shields.io/badge/in-global-red.svg)
+- Koyamada et al., 2015, Principal Sensitivity Analysis ![model:any](https://img.shields.io/badge/model-any-blue.svg) ![in:global](https://img.shields.io/badge/in-global-red.svg)
 - Turner 2016, A Model Explanation System: Latest Updates and Extensions ![@WHI2016](https://img.shields.io/badge/%40-WHI2016-orange.svg)
 - Park et al., 2016, ACDC: α-Carving Decision Chain for Risk Stratification ![@WHI2016](https://img.shields.io/badge/%40-WHI2016-orange.svg)
 - Dhurandhar et al., 2016, Building an Interpretable Recommender via Loss-Preserving Transformation ![@WHI2016](https://img.shields.io/badge/%40-WHI2016-orange.svg)
@@ -45,3 +45,18 @@
   - これはAccuracyなんかを見ているだけでは厳しい
 - Turner 2015: クレカの不正利用検知（なぜ不正利用だと感じたのか）
 - Ribeiro et al., 2016:
+
+## Tags 
+
+### model
+![model:any](https://img.shields.io/badge/model-any-blue.svg)
+
+### in
+![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
+![in:local](https://img.shields.io/badge/in-global-red.svg)
+
+### application
+![application:diagnosis](https://img.shields.io/badge/application-diagnosis-ff69b4.svg)
+
+### @
+![@WHI2016](https://img.shields.io/badge/%40-WHI2016-orange.svg)

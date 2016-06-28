@@ -1,8 +1,14 @@
 # Model Explanation
 
 - Ribeiro et al., 2016 [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](Ribeiro+2016.md)
+  - https://img.shields.io/badge/model-any-blue.svg 
+  - https://img.shields.io/badge/in-local-brightgreen.svg
 - Turner, 2015, [A Model Explanation System](Turner2015.md)
+  - https://img.shields.io/badge/model-any-blue.svg
+  - https://img.shields.io/badge/in-local-brightgreen.svg
 - Baehrens et al., 2010, How to explain individual classification decisions
+  - https://img.shields.io/badge/model-any-blue.svg
+  - https://img.shields.io/badge/in-local-brightgreen.svg
 
 ## なぜ重要なのか
 

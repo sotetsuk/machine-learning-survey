@@ -1,14 +1,8 @@
 # Model Explanation
 
-- Ribeiro et al., 2016 [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](Ribeiro+2016.md)
-  - ![model:any](https://img.shields.io/badge/model-any-blue.svg)
-  - ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
-- Turner, 2015, [A Model Explanation System](Turner2015.md)
-  - ![model:any](https://img.shields.io/badge/model-any-blue.svg)
-  - ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
-- Baehrens et al., 2010, How to explain individual classification decisions
-  - ![model:any](https://img.shields.io/badge/model-any-blue.svg)
-  - ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
+- Ribeiro et al., 2016 [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](Ribeiro+2016.md) ![model:any](https://img.shields.io/badge/model-any-blue.svg) ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
+- Turner, 2015, [A Model Explanation System](Turner2015.md) ![model:any](https://img.shields.io/badge/model-any-blue.svg) ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
+- Baehrens et al., 2010, How to explain individual classification decisions ![model:any](https://img.shields.io/badge/model-any-blue.svg) ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg)
 
 ## なぜ重要なのか
 

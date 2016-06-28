@@ -34,6 +34,9 @@
 ## 会議・ワークショップ
 - [WHI 2016 @ ICML](https://sites.google.com/site/2016whi/) ![@WHI2016](https://img.shields.io/badge/%40-WHI2016-orange.svg)
 
+## 関連研究者
+- Turner
+
 ## なぜ重要なのか
 
 ## 考えられる応用先

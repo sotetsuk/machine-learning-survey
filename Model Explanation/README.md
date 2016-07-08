@@ -16,7 +16,7 @@ _local_に_interpretable_なモデルで近似する手法LIMEを提案。また
 ![@:nips](https://img.shields.io/badge/%40-NIPS (WS)-ff4040.svg?style=flat-square?maxAge=86400)
 ![model:any](https://img.shields.io/badge/model-any-blue.svg?style=flat-square?maxAge=86400) ![in:local](https://img.shields.io/badge/in-local-brightgreen.svg?style=flat-square?maxAge=86400)
 
-##### Baehrens et al., 2010, How to explain individual classification decisions 
+##### Baehrens et al., 2010, [How to explain individual classification decisions](Baehrens+2010.md)
 [![source:pdf](https://img.shields.io/badge/source-pdf-green.svg?style=flat-square?maxAge=86400)](http://www.jmlr.org/papers/volume11/baehrens10a/baehrens10a.pdf)
 ![@:jmlr](https://img.shields.io/badge/%40-JMLR-8ee5ee.svg?style=flat-square?maxAge=86400)
 ![model:any](https://img.shields.io/badge/model-any-blue.svg?style=flat-square?maxAge=86400) 
@@ -54,9 +54,13 @@ sensitivity analysisは勾配を平均とったもので、_global_なモデル�
 ##### Chen et al., 2016, Enhancing Transparency and Control when Drawing Data-Driven Inferences about Individuals 
 [![source:pdf](https://img.shields.io/badge/source-pdf-green.svg?style=flat-square?maxAge=86400)](https://drive.google.com/file/d/0B9mGJ4F63iKGZWk0cXZraTNjRVU/view)
 ![@:icml](https://img.shields.io/badge/%40-ICML (WHI2016)-orange.svg?style=flat-square?maxAge=86400)
-##### Goodman et al., 2016, EU Regulations on Algorithmic Decision-Making and a "Right to Explanation" 
+##### Goodman and Flaxman, 2016, EU Regulations on Algorithmic Decision-Making and a "Right to Explanation" 
 [![source:pdf](https://img.shields.io/badge/source-pdf-green.svg?style=flat-square?maxAge=86400)](https://drive.google.com/file/d/0B9mGJ4F63iKGZWk0cXZraTNjRVU/view)
 ![@:icml](https://img.shields.io/badge/%40-ICML (WHI2016)-orange.svg?style=flat-square?maxAge=86400)
+
+EUがアルゴリズムの意思決定について、その意思決定の対象となった人が説明を求める権利を有する、という規則(the General Data Protection Regulation (GDPR) 
+)を採択したという話とその影響についての考察。
+
 ##### Abdollahi et al., 2016, Explainable Restricted Boltzmann Machines for Collaborative Filtering 
 [![source:pdf](https://img.shields.io/badge/source-pdf-green.svg?style=flat-square?maxAge=86400)](https://drive.google.com/file/d/0B9mGJ4F63iKGZWk0cXZraTNjRVU/view)
 ![@:icml](https://img.shields.io/badge/%40-ICML (WHI2016)-orange.svg?style=flat-square?maxAge=86400)

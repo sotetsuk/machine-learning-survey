@@ -28,3 +28,7 @@ TD学習が行われているのではないかという説がSchultz et al., 19
   - 有名なscienceの論文
 - Schultz, 1998 [Predictive reward signal of dopamine neurons](Schultz1998.md)
 - Pan et al., 2005, [Dopamine Cells Respond to Predicted Events during Classical Conditioning: Evidence for Eligibility Traces in the Reward-Learning Network](Pan+2005.md)
+
+# DQN
+
+[Guest Post (Part I): Demystifying Deep Reinforcement Learning](https://www.nervanasys.com/demystifying-deep-reinforcement-learning/)（解説ブログ）

@@ -32,3 +32,8 @@ TD学習が行われているのではないかという説がSchultz et al., 19
 # DQN
 
 [Guest Post (Part I): Demystifying Deep Reinforcement Learning](https://www.nervanasys.com/demystifying-deep-reinforcement-learning/)（解説ブログ）
+
+# + NLP
+
+Bahdanau et al., 2016 [An Actor-Critic Algorithm for Sequence Prediction](http://arxiv.org/pdf/1607.07086v2.pdf)
+- [related tweet](https://twitter.com/hillbig/status/758107699288559616)

@@ -28,3 +28,4 @@ Xu et al., "Show, attend and tell: Neural image caption generation with visual a
 - Tu et al., "Neural Machine Translation with Reconstruction." arXiv:1611.01874, 2016. [[pdf](https://arxiv.org/pdf/1611.01874v1.pdf)]
 - Kalchbrenner et al., "Neural Machine Translation in Linear Time." arXiv:1610.10099, 2016. [[pdf](https://arxiv.org/pdf/1610.10099v1.pdf)] 
 - Kočiský et al., "Semantic Parsing with Semi-Supervised Sequential Autoencoders." arXiv:1609.09315, 2016. [[pdf](https://arxiv.org/pdf/1609.09315v1.pdf)]
+- Gu et al., "Incorporating Copying Mechanism in Sequence-to-Sequence Learning." ACL, 2016, [[pdf](http://aclweb.org/anthology/P/P16/P16-1154.pdf)][[関連資料](http://www.lr.pi.titech.ac.jp/~sasano/acl2016suzukake/slides/08.pdf)]

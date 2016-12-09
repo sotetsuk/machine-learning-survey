@@ -16,6 +16,10 @@
 ### Grammer
 - Kuncoro et al., "What Do Recurrent Neural Network Grammars Learn About Syntax." arXiv:1611.05774, 2016. [[pdf](https://arxiv.org/pdf/1611.05774v1.pdf)]
 
+### Conversation
+- Vinyals and Quoc, A neural conversational model, ICML, 2015. [[pdf](https://arxiv.org/pdf/1506.05869v3.pdf)]
+- Mou et al., Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation, COLING, 2016. [[pdf](https://arxiv.org/pdf/1607.00970v2.pdf)]
+
 ## Image Processing
 ### Caption
 Xu et al., "Show, attend and tell: Neural image caption generation with visual attention." ICLR2015. [[pdf](http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf)]

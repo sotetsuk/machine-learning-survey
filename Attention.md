@@ -15,6 +15,8 @@
 
 ### Grammer
 - Kuncoro et al., "What Do Recurrent Neural Network Grammars Learn About Syntax." arXiv:1611.05774, 2016. [[pdf](https://arxiv.org/pdf/1611.05774v1.pdf)]
+- Yuan and Briscoe, "Grammatical error correction using neural machine translation" NAACL-HLT, 2016. [[pdf](https://www.aclweb.org/anthology/N/N16/N16-1042.pdf)]
+- Chollampatt et al., "Neural Network Translation Models for Grammatical Error Correction." arXiv:1606.00189, 2016. [[pdf](Neural Network Translation Models for Grammatical Error Correction)]
 
 ### Conversation
 - Vinyals and Quoc, A neural conversational model, ICML, 2015. [[pdf](https://arxiv.org/pdf/1506.05869v3.pdf)]

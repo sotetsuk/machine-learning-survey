@@ -70,6 +70,13 @@ Softの方がAttentionの見た目はいいが、Hardの方がBLUEは良い。
 
 ### Bahdanau et al. [An Actor-Critic Algorithm for Sequence Prediction](https://arxiv.org/pdf/1607.07086v2.pdf) arXiv:1607.07086 2016
 
+Seq2Seqの学習にactor-criticを使うことで、自らのそれまでの予測で条件付けながら、テスト時の指標（BLUE等）を直接最適化するように学習する手法を提案した。
+Seq2Seqの通常のdecoderは、学習時は真の系列で条件付けて次のトークンの尤度を計算するが、学習時は自身の予測系列に条件付けて次トークンの予測を行うので、トレーニング時とテスト時の乖離が激しい。また、BLEUのようなテスト時の指標をきちんと最適化出来ていない。
+Decoderを確率的な方策と見なし、各トークンを予測したときにBLUE等から報酬を定めて強化学習の枠組みに落とし込み、これらの問題を解決する。
+先行研究で既にREINFORCEを使ったものが提案されているが、criticを導入して行動価値関数も推定し、その行動価値関数を使った方策勾配によりactorを更新するので、勾配の分散が小さくなり結果の改善が期待できる。
+報酬の設計も部分系列にも報酬を定義するなど工夫をしている。
+独英翻訳のデータセットにおいて、REINFORCEを使った先行研究と比べBLUEが改善されていることを実験的に示した。
+
 ### Tu et al. [Neural Machine Translation with Reconstruction](https://arxiv.org/pdf/1611.01874v1.pdf) arXiv:1611.01874 2016
 
 ### Kalchbrenner et al. [Neural Machine Translation in Linear Time](https://arxiv.org/pdf/1610.10099v1.pdf) arXiv:1610.10099 2016

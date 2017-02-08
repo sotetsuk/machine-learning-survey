@@ -5,6 +5,12 @@
 理論寄りの論文を中心にしたいが、応用だけの論文もひとまずここにまとめる。
 コメントは[この方針](https://github.com/sotetsuk/machine-learning-survey/tree/renewal#年代毎-1)に従って付けられている。
 
+## 1998
+
+### Claus and Boutilier [The Dynamics of Reinforcement Learning in Cooperative Multiagent Systems](http://www.aaai.org/Papers/AAAI/1998/AAAI98-106.pdf) AAAI 1998
+
+協調ゲーム（エージェントの利害が互いに一致するゲーム）を解くマルチエージェントシステムに強化学習を使った論文。エージェントはナッシュ均衡が複数あるようなゲームを何回も繰り返す中で、その最適な方策を学習しようとする。エージェントが自分の行動の方策だけ考えるエージェント (IL; Independent learner) と、他のエージェントの方策についても分布を想定して自分の方策を決めるエージェント (JAL; Joint-action learner) を実験的に比較し、どちらも純粋戦略のナッシュ均衡（最適とは限らない）へ確率1で収束することを定理として述べている（証明はない）。また、楽観的な戦略（普通の楽観的とは違い、他のエージェントの方策が自分にとって都合が良いものが選ばれると思い込む戦略）を混ぜることで最適戦略に収束しやすくなると主張している。
+
 ## 1999
 
 ### Sutton et al. [Policy Gradient Methods for Reinforcement Learning with Function Approximation](https://webdocs.cs.ualberta.ca/~sutton/papers/SMSM-NIPS99.pdf) NIPS 1999

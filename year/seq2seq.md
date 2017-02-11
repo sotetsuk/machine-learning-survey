@@ -80,7 +80,7 @@ RNNによる予測を確率的な方策だとして、文の最後まで予測�
 
 - [github.com/facebookresearch/MIXER](https://github.com/facebookresearch/MIXER)
 
-### Bahdanau et al. [An Actor-Critic Algorithm for Sequence Prediction](https://arxiv.org/pdf/1607.07086v2.pdf) arXiv:1607.07086 2016
+### Bahdanau et al. [An Actor-Critic Algorithm for Sequence Prediction](https://arxiv.org/pdf/1607.07086v2.pdf) ICLR 2017
 
 Seq2Seqの学習にactor-criticを使うことで、自らのそれまでの予測で条件付けながら、テスト時の指標（BLUE等）を直接最適化するように学習する手法を提案した。
 Ranzato et al. (2016)で提案されたREINFORCEを使ったMIXERの発展と見なすことができる。

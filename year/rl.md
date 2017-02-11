@@ -23,7 +23,19 @@
 
 ## 2016
 
-### Mnih et al. [Asynchronous Methods for Deep Reinforcement Learning](https://arxiv.org/pdf/1602.01783v2.pdf) ICLR 2016
+### Mnih et al. [Asynchronous Methods for Deep Reinforcement Learning](https://arxiv.org/pdf/1602.01783v2.pdf) ICML 2016
+
+CPUでの並列スレッド実行により、GPUで学習したDQNより学習が早く、性能もいいアルゴリズムA3C (Asynchronous Advantage Actor-Critic) を提案した。
+DQNは本質的に体験再生を使った方策オフ型の学習なので、複数ステップ版のQ学習のような方策オン型のアルゴリズムの学習が出来ない。
+これは状態と行動の組(s, a)においての推定が少しずつ伝搬していく必要があり、タスクによっては学習が遅くなってしまう。
+そこで、体験再生の代わりに複数スレッドで環境とインタラクションして方策オンのサンプルを生成し、
+それに基づいたパラメータの勾配によってグローバルなモデルのパラメータを更新することで、Deepなモデルが方策オンでも学習できるアルゴリズムを実装した。
+A3CはAtariにおいて学習が早く、SoTAの性能を叩き出すという結果。また、行動空間が連続のタスク（MuJoCoなど）でもうまくいくことをデモしている。
+A3Cでは明示的にQ関数を学習する必要がなくなり、方策にLSTMを使えたり、連続空間のタスクにも使えるのも大きなメリットか。
+
+- [github.com/openai/universe-starter-agent](https://github.com/openai/universe-starter-agent)
+- [github.com/miyosuda/async_deep_reinforce](https://github.com/miyosuda/async_deep_reinforce)
+- [github.com/muupan/async-rl](https://github.com/muupan/async-rl)
 
 ### Schaul et al. [Prioritized Experience Replay](https://arxiv.org/pdf/1511.05952v4.pdf) ICLR 2016
 

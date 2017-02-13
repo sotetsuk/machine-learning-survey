@@ -68,7 +68,28 @@ Softの方がAttentionの見た目はいいが、Hardの方がBLUEは良い。
 
 ### Mou et al. [Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation](https://arxiv.org/pdf/1607.00970v2.pdf) COLING 2016
 
-### Bahdanau et al. [An Actor-Critic Algorithm for Sequence Prediction](https://arxiv.org/pdf/1607.07086v2.pdf) arXiv:1607.07086 2016
+### Ranzato et al. [Sequence level training with recurrent neural networks](https://arxiv.org/pdf/1511.06732v7.pdf) ICLR 2016
+
+言語モデルなどにおけるRNNによる文の予測では、トレーニング/テスト時の最適化と予測の基準の乖離が生じる。
+これを解決するため、REINFORCEを使ったMIXERという手法を提案した。
+RNNベースの言語モデルの予測は、学習時は真の系列で条件付けて次のトークンの尤度を計算するが、学習時は自身の予測系列に条件付けて次トークンの予測を行うので、トレーニング時とテスト時の乖離が激しい。また、BLEUのようなテスト時の指標をきちんと最適化出来ていないという二つの問題がある。
+RNNによる予測を確率的な方策だとして、文の最後まで予測をしたらBLUE等のスコアによって報酬を与えることで強化学習の問題に落とし、REINFORCEで解いている。
+強化学習の問題としては行動空間が大きすぎるので、クロスエントロピー誤差も組み合わせることにより解決するMIXERを提案。
+具体的には、最初の方のepochはクロスエントロピー誤差だけでトレーニングし、その後で段々とREINFORCEで学習するトークン数を後ろから前に広げていく。
+最近の手法も含めた他のベースラインと要約、翻訳、キャプション生成のタスクでBLUEにおいて比較し、優位性を実験的に示した。
+
+- [github.com/facebookresearch/MIXER](https://github.com/facebookresearch/MIXER)
+
+### Bahdanau et al. [An Actor-Critic Algorithm for Sequence Prediction](https://arxiv.org/pdf/1607.07086v2.pdf) ICLR 2017
+
+Seq2Seqの学習にactor-criticを使うことで、自らのそれまでの予測で条件付けながら、テスト時の指標（BLUE等）を直接最適化するように学習する手法を提案した。
+Ranzato et al. (2016)で提案されたREINFORCEを使ったMIXERの発展と見なすことができる。
+REINFORCEベースの手法は勾配の分散が大きくなってしまうので、actor-criticにして行動価値関数も推定することで分散を減らして性能の向上をさせたい。
+先行研究と同じようにDecoderを確率的な方策と見なし、各トークンを予測したときにBLUE等から報酬を定めて強化学習の枠組みに落とし込み、actor-criticで解いている。
+また、大きい行動空間を制限するためのヒューリスティックな工夫や、報酬がスパースになるのを避けるため部分系列にも報酬を定義するなどの工夫もしている。
+独英翻訳のデータセットにおいて、MIXERと比べBLUEが改善されていることを実験的に示した。
+
+- [github.com/rizar/actor-critic-public](https://github.com/rizar/actor-critic-public)
 
 ### Tu et al. [Neural Machine Translation with Reconstruction](https://arxiv.org/pdf/1611.01874v1.pdf) arXiv:1611.01874 2016
 

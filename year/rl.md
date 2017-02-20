@@ -15,6 +15,18 @@
 
 ### Sutton et al. [Policy Gradient Methods for Reinforcement Learning with Function Approximation](https://webdocs.cs.ualberta.ca/~sutton/papers/SMSM-NIPS99.pdf) NIPS 1999
 
+## 2012
+
+### Xie et al. [Artist Agent: A Reinforcement Learning Approach to Automatic Stroke Generation in Oriental Ink Painting](https://arxiv.org/pdf/1206.4634.pdf) ICML 2012
+
+筆絵を書く筆エージェントを連続空間における方策勾配法で学習した研究。
+指定された領域に対して滑らかに筆を滑らせるのは領域の形が変わったときに汎化させるのが難しい。
+そこで、これまで通ってきた軌跡から相対的にどちらに筆を動かすのかの角度を連続な行動として、方策をガウシアンとして平均と標準偏差でパラメトライズして方策勾配法で学習をする。
+即時報酬を、指定された領域をきちんと塗れているか、滑らかに動けているかといった観点で細かく設計している。
+実際に筆絵を描いて定性的な評価を行っている。人間が線を引く領域を作ってやる必要があるので論文中の細かい絵などは中々大変そうである。
+
+- IEICEのジャーナル版: http://www.ms.k.u-tokyo.ac.jp/2013/ArtistAgent.pdf
+
 ## 2013
 
 ### Levine and Koltun [Guided Policy Search](https://graphics.stanford.edu/projects/gpspaper/gps_full.pdf) ICML 2013

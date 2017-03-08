@@ -35,6 +35,14 @@
 
 ## 2016
 
+### Wang et al. [Dueling Network Architectures for Deep Reinforcement Learning](https://arxiv.org/pdf/1511.06581.pdf) ICML 2016
+
+DQNにおいて、状態を入力として行動毎の行動価値Qをいきなり出力するのではなく、その前に状態価値V（スカラー）と行動毎のアドバンテージAを出力するDNNアーキテクチャを提案。
+状態における価値を求めるのと、その状態でどう行動するのがいいかは別の話なので別々に学習したほうがいい場面も当然ある。
+特にどの行動をとっても同じような価値しか得られない場合、そこは状態価値関数に縮約した方が自然である。
+ネットワークは状態価値とアドバンテージを別々に出力して、それらから行動価値を出力するので、既存の（あるいはこれからの）DQNの資産を活用できる。
+57個のAtariのゲームでこの時点でSoTAを達成。
+
 ### Mnih et al. [Asynchronous Methods for Deep Reinforcement Learning](https://arxiv.org/pdf/1602.01783v2.pdf) ICML 2016
 
 CPUでの並列スレッド実行により、GPUで学習したDQNより学習が早く、性能もいいアルゴリズムA3C (Asynchronous Advantage Actor-Critic) を提案した。
@@ -67,6 +75,18 @@ CNNを使ったモデルフリーな手法が解き切れない新しい迷路�
 
 ### Munos et al. [Safe and Efficient Off-Policy Reinforcement Learning](https://arxiv.org/pdf/1606.02647v2.pdf) NIPS 2016
 
-### Wang et al. [Sample Efficient Actor-Critic with Experience Replay](https://arxiv.org/pdf/1611.01224v1.pdf) arXiv:1611.01224 (ICLR2017 under review) 2016
+## 2017
 
-### O'Donoghue et al. [PGQ: Combining policy gradient and Q-learning](https://arxiv.org/abs/1611.01626) arXiv:1611.01626 (ICLR2017 under review) 2016
+### Wang et al. [Sample Efficient Actor-Critic with Experience Replay](https://arxiv.org/pdf/1611.01224.pdf) ICLR 2017
+
+### O'Donoghue et al. [PGQ: Combining policy gradient and Q-learning](https://arxiv.org/abs/1611.01626) ICLR 2017
+
+エントロピー正則化付きの方策勾配法とQ学習の不動点の関係について新しい知見を見出し、それを使って方策勾配法とQ学習を組み合わせた新しいアルゴリズムPGQを提案した。
+背景には、方策勾配法は基本的にオンラインでオフラインのデータの活用が出来ないのでそれを活用できるようにしたいというモチベーションがある（これはACER等と同じ）。
+PGQは、Actor-Criticの更新則に、方策と状態の価値関数から計算される行動価値関数にQ学習を適用する項をηで重み付けして追加する。
+学習される行動価値関数が最適へと収束することの証明に加え、AtariでDQNとA3Cと比較をした結果、PGQが一番悪いゲームはなかった（つまり常に1位か2位）。
+
+示している・示唆していること
+- 3.1, 3.2: エントロピー正則化付きの方策勾配法は、アドバンテージを学習していると見なすことが出来る（のでこれを使えばQ関数を表現できる）
+- 3.3: Action-preferenceで表現した方策を使うactor-critic（方策勾配法）と，dueling architectureとボルツマン方策を使った価値関数ベースの手法（Q学習やSARSA）が更新則として等しい
+- 4.3: PGQの更新則が最適価値関数を導く

@@ -66,6 +66,15 @@ NMTではEmbeddingする次元に制限があり、固有名詞などボキャ�
 最後にアラインメントに応じてUNKの対応に応じて適切な単語を置き換える。
 頻出頻度の低い文で確かに性能が向上されており、全体としての性能自体もWMT14英仏でBLUEを評価した結果当時のSoTA(37.8)。
 
+
+### Jean e al. [On Using Very Large Target Vocabulary for Neural Machine Translation](https://arxiv.org/pdf/1412.2007.pdf) ACL 2015
+
+NMTではボキャブラリサイズを大きく出来ない問題に対して、それにImportance samplingをして対処するという論文。
+NMTのボキャブラリーサイズが大きいと最後のsoftmaxの正規化をするときに計算量が多くなってしまうのと、デコーディングが効率的に出来ないので、ボキャブラリのサイズを大きくしづらい。
+そこで、勾配の期待値計算をImportance samplingを使うことで計算を速くする手法を提案。デコーディング時も翻訳元の文に合せて候補トークンリストを作り、ボキャブラリを絞ってデコードをする。
+WMT'14の英仏・英独データセットを使ってBLEUで評価し、アンサンブルすればSoTAと遜色ないという主張。
+
+
 ## 2016
 
 ### Yuan and Briscoe [Grammatical error correction using neural machine translation](https://www.aclweb.org/anthology/N/N16/N16-1042.pdf) NAACL-HLT 2016

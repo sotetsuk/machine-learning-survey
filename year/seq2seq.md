@@ -80,6 +80,12 @@ FCEとCoNLL2014のデータセットにおいてGLEU, I-measure, M2スコアで�
 
 ### Xie et al. [Neural Language Correction with Character-Based Attention](https://arxiv.org/pdf/1603.09727.pdf) arXiv:1603.09727 2016
 
+GECタスクに文字ベースのNMTを使ったという論文。
+GECではOOVの問題がさらに顕著なので、そもそも文字ベースのNMTを使うという話。
+系列が長くなりすぎるので双方向GRUをピラミッド型に積んだエンコーダを使っている。
+CoNLL2014のデータでM2スコアで40.56でSoTA（当時）という主張。
+ただし、結局一緒に外部データで学習した言語モデルを使ったり、人工的にトレーニングデータの誤りを増やしたり、誤り訂正を適用するかどうかのモデルを用意したりと単体では精度が出ない印象。
+
 ### Mou et al. [Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation](https://arxiv.org/pdf/1607.00970v2.pdf) COLING 2016
 
 ### Ranzato et al. [Sequence level training with recurrent neural networks](https://arxiv.org/pdf/1511.06732v7.pdf) ICLR 2016

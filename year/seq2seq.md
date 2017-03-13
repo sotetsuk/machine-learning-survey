@@ -127,6 +127,13 @@ REINFORCEベースの手法は勾配の分散が大きくなってしまうの�
 ### Kočiský et al. [Semantic Parsing with Semi-Supervised Sequential Autoencoders](https://arxiv.org/pdf/1609.09315v1.pdf) arXiv:1609.09315 2016
 
 ### Gu et al. [Incorporating Copying Mechanism in Sequence-to-Sequence Learning](http://aclweb.org/anthology/P/P16/P16-1154.pdf) ACL 2016
+
+OOVな単語でも、翻訳元の文中にあれば出力出来るCopyNetを提案。
+対話タスクなどでは人名などを繰り返すことがあるが、これに対応する狙いがある。
+デコーダーの出力をボキャブラリーに加えて翻訳元の文からも出力できるようにして、End-to-Endで学習をしている。
+人工データにおける評価と、LCSTSデータセットで要約タスクにおけるROUGEスコアでの評価、DS-1, DS-2データセットで対話タスクの評価を行った。
+ナイーブではあるが、実データはどちらも翻訳元の内容を繰り返すのが重要なタスクなので、スコアは随分改善されているようにみえる。
+
 - [関連資料]( http://www.lr.pi.titech.ac.jp/~sasano/acl2016suzukake/slides/08.pdf)
 
 ### Park et al. [Attentive Explanations: Justifying Decisions and Pointing to the Evidence](https://arxiv.org/pdf/1612.04757v1.pdf) arXiv:1612.04757 2016

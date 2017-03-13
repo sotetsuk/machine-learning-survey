@@ -70,6 +70,12 @@ NMTではEmbeddingする次元に制限があり、固有名詞などボキャ�
 
 ### Yuan and Briscoe [Grammatical error correction using neural machine translation](https://www.aclweb.org/anthology/N/N16/N16-1042.pdf) NAACL-HLT 2016
 
+GECタスクにNMTを初めて使ったという論文。
+OOVの問題がGECタスクではより顕著になるので、これについてもLuong et al. (2015)のアラインメントベースの手法を踏まえたより簡潔な解決方法を提案している。
+恐らくNMTのUNK入りアウトプットにアラインメントをかけて、単語レベルの翻訳をするだけだと思われる。
+FCEとCoNLL2014のデータセットにおいてGLEU, I-measure, M2スコアで評価。CoNLL2014のM2スコアが39.90でSoTAという主張。
+イントロの例でむやみにUNKトークンに変えると意味を踏まえた識別が出来ないという前フリが解決出来てない気がするが...
+
 ### Chollampatt et al. [Neural Network Translation Models for Grammatical Error Correction](https://arxiv.org/pdf/1606.00189.pdf) IJCAI 2016
 
 ### Xie et al. [Neural Language Correction with Character-Based Attention](https://arxiv.org/pdf/1603.09727.pdf) arXiv:1603.09727 2016

@@ -58,6 +58,14 @@ Softの方がAttentionの見た目はいいが、Hardの方がBLUEは良い。
 
 ### Yao et al. [Attention with Intention for a Neural Network Conversation Model](https://arxiv.org/pdf/1510.08565v3.pdf) NIPSWS 2015
 
+### Luong et al. [Addressing the Rare Word Problem in Neural Machine Translation](https://arxiv.org/pdf/1410.8206.pdf)
+
+NMTのOOVの問題にナイーブな前後処理を加えて対応する手法を提案した。
+NMTではEmbeddingする次元に制限があり、固有名詞などボキャブラリに入り切らない単語が問題になる。
+翻訳元と翻訳先の単語間のアラインメントを事前に教師なしで学習し、NMTは入力するUNKトークンにアラインメント情報を加えて学習をさせる。
+最後にアラインメントに応じてUNKの対応に応じて適切な単語を置き換える。
+頻出頻度の低い文で確かに性能が向上されており、全体としての性能自体もWMT14英仏でBLUEを評価した結果当時のSoTA(37.8)。
+
 ## 2016
 
 ### Yuan and Briscoe [Grammatical error correction using neural machine translation](https://www.aclweb.org/anthology/N/N16/N16-1042.pdf) NAACL-HLT 2016

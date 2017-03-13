@@ -35,6 +35,14 @@
 
 ## 2016
 
+### Wang et al. [Dueling Network Architectures for Deep Reinforcement Learning](https://arxiv.org/pdf/1511.06581.pdf) ICML 2016
+
+DQNにおいて、状態を入力として行動毎の行動価値Qをいきなり出力するのではなく、その前に状態価値V（スカラー）と行動毎のアドバンテージAを出力するDNNアーキテクチャを提案。
+状態における価値を求めるのと、その状態でどう行動するのがいいかは別の話なので別々に学習したほうがいい場面も当然ある。
+特にどの行動をとっても同じような価値しか得られない場合、そこは状態価値関数に縮約した方が自然である。
+ネットワークは状態価値とアドバンテージを別々に出力して、それらから行動価値を出力するので、既存の（あるいはこれからの）DQNの資産を活用できる。
+57個のAtariのゲームでこの時点でSoTAを達成。
+
 ### Mnih et al. [Asynchronous Methods for Deep Reinforcement Learning](https://arxiv.org/pdf/1602.01783v2.pdf) ICML 2016
 
 CPUでの並列スレッド実行により、GPUで学習したDQNより学習が早く、性能もいいアルゴリズムA3C (Asynchronous Advantage Actor-Critic) を提案した。
@@ -67,6 +75,46 @@ CNNを使ったモデルフリーな手法が解き切れない新しい迷路�
 
 ### Munos et al. [Safe and Efficient Off-Policy Reinforcement Learning](https://arxiv.org/pdf/1606.02647v2.pdf) NIPS 2016
 
-### Wang et al. [Sample Efficient Actor-Critic with Experience Replay](https://arxiv.org/pdf/1611.01224v1.pdf) arXiv:1611.01224 (ICLR2017 under review) 2016
+## 2017
 
-### O'Donoghue et al. [PGQ: Combining policy gradient and Q-learning](https://arxiv.org/abs/1611.01626) arXiv:1611.01626 (ICLR2017 under review) 2016
+### Wang et al. [Sample Efficient Actor-Critic with Experience Replay](https://arxiv.org/pdf/1611.01224.pdf) ICLR 2017
+
+### O'Donoghue et al. [PGQ: Combining policy gradient and Q-learning](https://arxiv.org/abs/1611.01626) ICLR 2017
+
+エントロピー正則化付きの方策勾配法の局所解とQ学習の収束点の関係について新しい知見を見出し、それを使って方策勾配法とQ学習を組み合わせた新しいアルゴリズムPGQを提案した。
+背景には、方策勾配法は基本的にオンラインでオフラインのデータの活用が出来ないのでそれを活用できるようにしたいというモチベーションがある（これはACER等と同じ）。
+PGQは、Actor-Criticの更新則に、方策と状態の価値関数から計算される行動価値関数にQ学習を適用する項をηで重み付けして追加する。
+学習される行動価値関数が最適へと収束することの証明に加え、AtariでDQNとA3Cと比較をした結果、PGQが一番悪いゲームはなかった（つまり常に1位か2位）。
+
+##### 示している・示唆していること
+- 3.1, 3.2: エントロピー正則化付きの方策勾配法は、アドバンテージを学習していると見なすことが出来る（のでこれを使えばQ関数を表現できる）
+- 3.3: Action-preferenceで表現した方策を使うactor-critic（方策勾配法）と、dueling architectureとボルツマン方策を使った価値関数ベースの手法（Q学習やSARSA）が更新則として等しい
+- 4.3: PGQの更新則が最適価値関数を導く
+
+### Nachum et al. [Bridging the Gap Between Value and Policy Based Reinforcement Learning](https://arxiv.org/pdf/1702.08892.pdf) ICML under review 2017
+
+割引付きのエントロピー正則化項が追加された目的関数O_entを最適化する（ことになる）アルゴリズム、PCLを提案。
+背景には方策オンと方策オフの一長一短を解決したいというのがある。これは方策オフの複数ステップへの延長路線。
+まず、最適ベルマン作用素を特殊ケースとして含む新しいベルマン作用素を提案 (softmax Bellman opperator) し、
+これの不動点であるsoftmax-vとO_entの最適方策が、方策オンのサンプルの軌跡に対して満たすべき関係式を導いている。
+そしてこの関係式を満たすように方策と状態価値関数を更新する。また軌跡をリプレイバッファに入れることで方策オフ的な学習効率の改善もしている。
+複数ステップの方策オフ型学習をしていることになるが、バイアスがないのが大きな特徴か。
+
+##### 定義・提案しているもの
+- Softmaxベルマン方程式・作用素（式4, 54）とそれらの不動点としてのsoftmax-Vとsoftmax-Q（式13, 14）
+- 3.2: 割引付きのエントロピー正則化項（とそれを通常の累積割引報酬和の期待値に足した目的関数O_ent（式15））
+
+##### 示しているもの
+O_entの最適方策とsoftmax-V(Q)の間には定理1と補題3の関係が成り立つ
+
+- 定理1: O_entについての最適方策とsoftmax-Vが式16の関係式を満たす
+  - 別々に定義されたO_ent（の最適方策）とsoftmax-Vがここで繋がる
+  - 式16はsoftmaxベルマン作用素の不動点が満たすべき関係式のようなもの（？）
+  - 通常の最適ベルマン作用素と比べるとTD誤差がゼロになるのではなく、O_entの最適方策のlogになる
+- 補題2: O_entの最適方策がsoftamxアドバンテージ関数（softmax-Qとsoftmax-V）を使って表せる
+- 補題3: O_ent, O_entの最適方策、softmax-Vが与えられたとき、これらは軌跡s1:tについてある関係式を満たす（必要がある）
+  - 式16の等式を帰納的に軌跡s1:tに適用していくことで導かれる等式
+  - 恐らく式(16)が1ステップのベルマン方程式に対応し、これが複数ステップのベルマン方程式に対応している（？）
+  - O_entの最適方策とsoftmax-Vがこの関係を軌跡s1:tについて満たさなければならないので、これを満たすものを学習しようというのがPCLの発想
+- 定理4: ある方策と価値関数Vが任意のサンプル(s, a, s')で式(16)を満たせば、それらはそれぞれO_entの最適方策とsoftmax-Vになる
+  - つまり、任意のサンプルで式(16)を満たすように学習していけば、これがO_entの最適方策とsoftmax-Vが求まる根拠になる

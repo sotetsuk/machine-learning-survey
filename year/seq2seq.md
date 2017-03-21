@@ -66,13 +66,34 @@ NMTではEmbeddingする次元に制限があり、固有名詞などボキャ�
 最後にアラインメントに応じてUNKの対応に応じて適切な単語を置き換える。
 頻出頻度の低い文で確かに性能が向上されており、全体としての性能自体もWMT14英仏でBLUEを評価した結果当時のSoTA(37.8)。
 
+
+### Jean e al. [On Using Very Large Target Vocabulary for Neural Machine Translation](https://arxiv.org/pdf/1412.2007.pdf) ACL 2015
+
+NMTではボキャブラリサイズを大きく出来ない問題に対して、それにImportance samplingをして対処するという論文。
+NMTのボキャブラリーサイズが大きいと最後のsoftmaxの正規化をするときに計算量が多くなってしまうのと、デコーディングが効率的に出来ないので、ボキャブラリのサイズを大きくしづらい。
+そこで、勾配の期待値計算をImportance samplingを使うことで計算を速くする手法を提案。デコーディング時も翻訳元の文に合せて候補トークンリストを作り、ボキャブラリを絞ってデコードをする。
+WMT'14の英仏・英独データセットを使ってBLEUで評価し、アンサンブルすればSoTAと遜色ないという主張。
+
+
 ## 2016
 
 ### Yuan and Briscoe [Grammatical error correction using neural machine translation](https://www.aclweb.org/anthology/N/N16/N16-1042.pdf) NAACL-HLT 2016
 
+GECタスクにNMTを初めて使ったという論文。
+OOVの問題がGECタスクではより顕著になるので、これについてもLuong et al. (2015)のアラインメントベースの手法を踏まえたより簡潔な解決方法を提案している。
+恐らくNMTのUNK入りアウトプットにアラインメントをかけて、単語レベルの翻訳をするだけだと思われる。
+FCEとCoNLL2014のデータセットにおいてGLEU, I-measure, M2スコアで評価。CoNLL2014のM2スコアが39.90でSoTA（当時）という主張。
+イントロの例でむやみにUNKトークンに変えると意味を踏まえた識別が出来ないという前フリが解決出来てない気がするが...
+
 ### Chollampatt et al. [Neural Network Translation Models for Grammatical Error Correction](https://arxiv.org/pdf/1606.00189.pdf) IJCAI 2016
 
 ### Xie et al. [Neural Language Correction with Character-Based Attention](https://arxiv.org/pdf/1603.09727.pdf) arXiv:1603.09727 2016
+
+GECタスクに文字ベースのNMTを使ったという論文。
+GECではOOVの問題がさらに顕著なので、そもそも文字ベースのNMTを使うという話。
+系列が長くなりすぎるので双方向GRUをピラミッド型に積んだエンコーダを使っている。
+CoNLL2014のデータでM2スコアで40.56でSoTA（当時）という主張。
+ただし、結局一緒に外部データで学習した言語モデルを使ったり、人工的にトレーニングデータの誤りを増やしたり、誤り訂正を適用するかどうかのモデルを用意したりと単体では精度が出ない印象。
 
 ### Mou et al. [Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation](https://arxiv.org/pdf/1607.00970v2.pdf) COLING 2016
 
@@ -106,6 +127,13 @@ REINFORCEベースの手法は勾配の分散が大きくなってしまうの�
 ### Kočiský et al. [Semantic Parsing with Semi-Supervised Sequential Autoencoders](https://arxiv.org/pdf/1609.09315v1.pdf) arXiv:1609.09315 2016
 
 ### Gu et al. [Incorporating Copying Mechanism in Sequence-to-Sequence Learning](http://aclweb.org/anthology/P/P16/P16-1154.pdf) ACL 2016
+
+OOVな単語でも、翻訳元の文中にあれば出力出来るCopyNetを提案。
+対話タスクなどでは人名などを繰り返すことがあるが、これに対応する狙いがある。
+デコーダーの出力をボキャブラリーに加えて翻訳元の文からも出力できるようにして、End-to-Endで学習をしている。
+人工データにおける評価と、LCSTSデータセットで要約タスクにおけるROUGEスコアでの評価、DS-1, DS-2データセットで対話タスクの評価を行った。
+ナイーブではあるが、実データはどちらも翻訳元の内容を繰り返すのが重要なタスクなので、スコアは随分改善されているようにみえる。
+
 - [関連資料]( http://www.lr.pi.titech.ac.jp/~sasano/acl2016suzukake/slides/08.pdf)
 
 ### Park et al. [Attentive Explanations: Justifying Decisions and Pointing to the Evidence](https://arxiv.org/pdf/1612.04757v1.pdf) arXiv:1612.04757 2016

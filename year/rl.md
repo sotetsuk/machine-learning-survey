@@ -72,6 +72,8 @@ A3Cでは明示的にQ関数を学習する必要がなくなり、方策にLSTM
 
 ### Schaul et al. [Prioritized Experience Replay](https://arxiv.org/pdf/1511.05952v4.pdf) ICLR 2016
 
+### Norouzi et al. [Reward Augmented Maximum Likelihood for Neural Structured Prediction](https://arxiv.org/pdf/1609.00150.pdf) NIPS 2016
+
 ### Tamar et al. [Value Iteration Networks](https://arxiv.org/pdf/1602.02867v2.pdf) NIPS 2016
 汎用的なプランニングが出来る価値反復アルゴリズムを提案したという話。
 昨今の深層学習と強化学習を組み合わせた話の主流は完全なモデルフリーの話だが、

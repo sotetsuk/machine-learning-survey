@@ -33,6 +33,8 @@
 
 - https://www.youtube.com/watch?v=xMHjkZBvnfU
 
+## 2014
+
 ### Silver et al. [Deterministic Policy Gradient Algorithms](http://proceedings.mlr.press/v32/silver14.pdf) ICML 2014
 決定論的な方策を用いた方策勾配法（定理）を導出し、これが通常の確率的な方策を用いた方策勾配法の極限版であることを示した。
 また方策オフ型の決定論的方策勾配法を提案・評価した。

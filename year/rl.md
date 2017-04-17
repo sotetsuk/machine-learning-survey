@@ -33,6 +33,19 @@
 
 - https://www.youtube.com/watch?v=xMHjkZBvnfU
 
+## 2014
+
+### Silver et al. [Deterministic Policy Gradient Algorithms](http://proceedings.mlr.press/v32/silver14.pdf) ICML 2014
+決定論的な方策を用いた方策勾配法（定理）を導出し、これが通常の確率的な方策を用いた方策勾配法の極限版であることを示した。
+また方策オフ型の決定論的方策勾配法を提案・評価した。
+通常の方策勾配法は方策オン型でないと学習できない（Inportance sampling (IS) 等工夫をしないと勾配推定にバイアスがかかる）。
+また結局学習が進むと決定論的になりがちで探索がうまくできない問題がある。
+決定論的方策勾配なら推定方策に関する期待値を取らないのでバイアスを心配せずに方策オフ型学習で探索戦略を使うことが可能になる。
+決定論的確率的勾配は、形としては状態だけについての期待値を取り、行動価値関数Qに関する勾配も期待値を取る。
+方策勾配定理と証明の他、比較的簡単な連続行動空間タスクでの数値実験を行った: (1) バンディットタスク (2) 強化学習。
+（確率的な）方策勾配法は行動空間についても積分を取る必要があるためサンプルが十分必要であり、
+連続のように広い行動空間で決定論的方策勾配法の方が優位だと実験的に主張している。
+
 ## 2016
 
 ### Wang et al. [Dueling Network Architectures for Deep Reinforcement Learning](https://arxiv.org/pdf/1511.06581.pdf) ICML 2016
@@ -58,6 +71,8 @@ A3Cでは明示的にQ関数を学習する必要がなくなり、方策にLSTM
 - [github.com/muupan/async-rl](https://github.com/muupan/async-rl)
 
 ### Schaul et al. [Prioritized Experience Replay](https://arxiv.org/pdf/1511.05952v4.pdf) ICLR 2016
+
+### Norouzi et al. [Reward Augmented Maximum Likelihood for Neural Structured Prediction](https://arxiv.org/pdf/1609.00150.pdf) NIPS 2016
 
 ### Tamar et al. [Value Iteration Networks](https://arxiv.org/pdf/1602.02867v2.pdf) NIPS 2016
 汎用的なプランニングが出来る価値反復アルゴリズムを提案したという話。

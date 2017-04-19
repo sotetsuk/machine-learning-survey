@@ -52,3 +52,4 @@ Reinforcement Learning in Spoken Dialogue Systems](https://arxiv.org/pdf/1508.03
 Gumbel-Softmaxは温度τをパラメータに持ち，τ↓0でカテゴリカル分布のようにサンプルがone-hotになっていく。
 実験的には特に、VAEの学習をELBOで評価したときに良い性能を示した。
 
+- http://musyoku.github.io/2016/11/12/Categorical-Reparameterization-with-Gumbel-Softmax/

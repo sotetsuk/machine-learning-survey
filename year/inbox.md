@@ -41,3 +41,14 @@ Reinforcement Learning in Spoken Dialogue Systems](https://arxiv.org/pdf/1508.03
 解釈性の尺度について
 
 ### Higgins et al. [Early Visual Concept Learning with Unsupervised Deep Learning](https://arxiv.org/pdf/1606.05579v3.pdf) arXiv:1606.05579 2016
+
+## 2017
+
+### Jang et al. [CATEGORICAL REPARAMETERIZATION WITH GUMBEL-SOFTMAX](https://arxiv.org/pdf/1611.01144.pdf) ICLR 2017
+
+カテゴリカル分布の微分可能なバージョンとしてGumbel-Softmaxを提案した。
+例えばVAEのようなモデルは目的関数中にカテゴリカル分布による期待値計算が入っているが、カテゴリカル分布からのone-hotなサンプル（[0, 1, 0, ...]など）を使ってサンプリングをして目的関数の値を求めると、微分不可能になってしまい誤差逆伝搬法ができなくなってしまう。
+そこで、Gumbel分布からのサンプルを使ってsoftmax関数をかませることで"微分可能なカテゴリカル分布"であるGumbel-Softmaxを新しく提案した。
+Gumbel-Softmaxは温度τをパラメータに持ち，τ↓0でカテゴリカル分布のようにサンプルがone-hotになっていく。
+実験的には特に、VAEの学習をELBOで評価したときに良い性能を示した。
+

@@ -77,8 +77,9 @@ WMT'14の英仏・英独データセットを使ってBLEUで評価し、アン�
 
 ## 2016
 
-### Li et al. [Deep Reinforcement Learning for Dialogue Generation](https://arxiv.org/pdf/1606.01541.pdf)
+### Li et al. [Deep Reinforcement Learning for Dialogue Generation](https://arxiv.org/pdf/1606.01541.pdf) EMNLP 2016
 
+対話文の生成タスクを２つのエージェントに対話をさせていると見立てて方策勾配法で解いた論文。
 MLEでの最適化だと"I don't know"のように単純に頻度が高い返答を返しがちだったり、同じ返答を繰り返したり無限ループにハマったりしてしまうことが多い。
 そこで、ユーザが設計した対話に適した報酬を最適化でき、かつ長期の影響を考慮できるように強化学習を用いる。
 状態は直前の２つの会話文、行動は次に返答する会話文と定義し、報酬は(1) 返答のしやすさ、(2) 新しい情報を返しているか、(3) 文の流れが妥当か、を組み込んでヒューリスティックに作っている。
